@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+
+{% block title %}Site Checker{% endblock %}
+
+{% block content %}
+
+<br>
+<h1>Site Checker</h1>
+<br>
+<p>
+    Site Availability Checker.
+</p>
+
+<p>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP" target="blank">Learn More</a> about the HTTP header results below.
+</p>
+
+<form method="post" action="/">
+    <select id="protocol" name="protocol">
+        <option value="http://">http://</option>
+        <option value="https://">https://</option>
+    </select>   
+    <label for="url">&nbsp;</label>
+    <input type="text" id="url" name="url" value=""><br><br>
+    <input type="submit" value="Submit">
+</form>
+
+<p>
+    {{ url_valid }}  
+</p>
+<p>
+    <table class="sitecheck">
+        <tr>
+           <th colspan="2">
+              Results
+           </th>
+        <tr>
+           <td>
+              URL:
+           </td>
+           <td>
+              {{ url_submitted }}
+           </td>
+        </tr>
+        <tr>
+           <td>
+               Name Lookup:
+           </td>
+           <td>
+              {{ dns_result }}
+           </td>
+        </tr>
+        <tr>
+           <td>
+              HTTP Response: 
+           </td>
+           <td>
+               {{ http_code }} {{ http_reason }}
+           </td>
+        </tr>
+    </table>
+</p>
+
+<p>
+    <table class="sitecheck">
+        <tr>
+            <th colspan="2">
+               HTTP Header
+            </th>
+        <tr>
+        <tr>
+           <td>
+              strict-transport-security
+           </td>
+           <td>
+              {{ h_sts }}
+           </td>
+        </tr>
+        <tr>
+           <td>
+              x-content-type-options
+           </td>
+           <td>
+              {{ h_xcto }}
+           </td>
+        </tr>
+        <tr>
+            <td>
+                x-frame-options
+            </td>
+            <td>
+               {{ h_xfo }}
+            </td>
+         </tr>
+         <tr>
+            <td>
+                content-security-policy
+            </td>
+            <td>
+                {{ h_csp }}
+            </td>
+         </tr>
+    </table>
+</p>
+
+{% endblock %}

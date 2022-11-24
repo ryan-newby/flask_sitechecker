@@ -1,0 +1,106 @@
+body {
+    width: 100%;
+    margin: 10px auto;
+    background-color: #ffffff;
+    background-image: linear-gradient(#f9f9f9, #ffffff);
+    font-family: "Open Sans", "PT Sans", Calibri, Tahoma, sans-serif;
+    font: 10pt;
+}
+
+header {
+    background-color: #306998;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    padding-right: 5px;
+    font-family: cursive;
+    font: 15px; 
+    color: #ffffff;
+}
+     
+footer {
+    background-color: #ffffff;
+    padding: 15px;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #18181a;
+    text-align: center;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+}
+ 
+ nav {
+    flex: 0 1 10%;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-left: 8px;
+    background-color: #f9f9f9;
+    background-image: linear-gradient(#f9f9f9, #ffffff);
+    color: #306998;
+    flex: 0 1 15%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+ main {
+    flex: 0 1 75%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 5px;
+    background-color: #ffffff;
+}
+ 
+aside {
+    flex: 0 1 15%;
+    background-color: #f9f9f9;
+    background-image: linear-gradient(#f9f9f9, #ffffff);
+}
+
+a:link  {
+    text-decoration: none;
+    color: #306998;
+}
+ 
+a:visited {
+    text-decoration: none;
+    color: #306998;
+}
+ 
+a:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+  
+table.sitecheck {
+    table-layout: auto;
+    width: 400px;
+    border-collapse: collapse;
+    text-align: left;   
+}
+     
+.sitecheck th {
+    padding: 3px;
+    background-color: #306998;
+    color: #f9f9f9;
+}
+     
+.sitecheck td {
+    border: 1px solid black;
+    padding: 5px;
+    background-color: #f9f9f9;
+    text-align: left;
+    font-size: 90%;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+   background-color: #04AA6D;
+   border: none;
+   color: white;
+   padding: 10px 32px;
+   text-decoration: none;
+   margin: 4px 2px;
+   cursor: pointer;
+ }
