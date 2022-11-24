@@ -33,7 +33,7 @@ class httpStatus:
             http_rlist.append(response.headers)
             return http_rlist
         except requests.exceptions.RequestException as e:
-            # catastrophic error. bail.
+            # error, exit
             raise SystemExit(e)
 
   
